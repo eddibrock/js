@@ -3,13 +3,14 @@
 //возвести 2 в степень равную степени индекса
 
 
-function findIndexCustom(int) {
-    let arr = int.toString(2).split('').reverse();
-    console.log(arr);
-    let pos = arr.findIndex(el => el == 0);
-    let posSecond = arr.findIndex((el,index) => el == 0 && index!==1);
-    console.log(posSecond);
-    return 2**(posSecond+1);
-}
+let int=1;
+let arr = int.toString(2).split('');
+console.log(arr);
 
-console.log(findIndexCustom(1073741824));
+arr.map((el,idx,array)=>{
+   if((idx+1)%2===0){
+       array[idx]=array[idx-1];
+       array[idx-1]=el;
+   }
+});
+console.log(parseInt(arr.join(''),2));

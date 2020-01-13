@@ -90,11 +90,16 @@ function mostUsedMethods() {
 
 
 /** Циклы */
-// for(let word of arr){
-//     console.log(word);
-// }
-let arr = ['one', 'two', 'tree', 'for'];
-console.log(arr);
+
+function iterate() {
+    let arr = ['one', 'two', 'tree', 'for'];
+    for (let word of arr) {
+        console.log(word);
+    }
+    arr.forEach((el, idx, arr) => console.log(`el: ${el} idx: ${idx} arr: ${arr}`));
+}
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
+
 // mostUsedMethods();
 // pushPopShiftUnshift();
 // splitJoin();
