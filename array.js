@@ -79,8 +79,8 @@ function searchIt() {
  * */
 function mostUsedMethods() {
     const arr = [1, 2, 3, 4, 5, 2];
-    const isSomeInArr=arr.some(el=>el===3); // хотябы 1 равен 3
-    const isAnyInArr=arr.every(el=>el<6); // все меньше 6
+    const isSomeInArr = arr.some(el => el === 3); // хотябы 1 равен 3
+    const isAnyInArr = arr.every(el => el < 6); // все меньше 6
     /**поиск и фильтрация*/
     const findValue = arr.find(item => item === 2); // Если елемент равен 2 то он будет значением переменной а поиске прекратится
     const findIdx = arr.findIndex(item => item === 2); // Тоже самое, но уже возвращается не значение а индекс
@@ -91,18 +91,21 @@ function mostUsedMethods() {
     }); // Получить только четные числа. Работает так - если return true то item попадет в массив. При этом, как и в map и reduce, можно что то делать
     // с другими аргументами, например с index(получить массив индексов четных чисел для дальнейшего доступа к ним). Но обязательно нужно вернуть TRUE иначе получим пустой массив
     /**действие над елементами массива*/
-    const multiplyBy2 = arr.map(item => item*2); //делает что то с елементом и копирует результат в новый массив
-    const reduceValue=arr.reduce((acc,el)=>acc+el,0); // просто суммируем каждое число вместе.
+    const multiplyBy2 = arr.map(item => item * 2); //делает что то с елементом и копирует результат в новый массив
+    const reduceValue = arr.reduce((acc, el) => acc + el, 0); // просто суммируем каждое число вместе.
 }
 
 /** Циклы */
-let arr = ['one', 'two', 'tree', 'for'];
-
-for(let word of arr){
-    console.log(word);
+function iterate() {
+    let arr = ['one', 'two', 'tree', 'for'];
+    for (let word of arr) {
+        console.log(word);
+    }
+    arr.forEach((el, idx, arr) => console.log(`el: ${el} idx: ${idx} arr: ${arr}`));
 }
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
 
-mostUsedMethods();
+// mostUsedMethods();
 // pushPopShiftUnshift();
 // splitJoin();
 // sortIt();
