@@ -88,6 +88,18 @@ function mostUsedMethods() {
     const reduceValue = arr.reduce((acc, el) => acc + el, 0); // просто суммируем каждое число вместе.
 }
 
+/** Если нужно проверить елементы массива */
+function getBool() {
+    // Если нужно протестировать элементы массива на условие и нужно вернуть булевое значение,
+    // вы должны воспользоваться методами Array.prototype.every() или Array.prototype.some().
+    let arr=[4,3,7,5];
+    // console.log(arr.every((el)=>el>10)); // false так как никто не больше 10
+    // console.log(arr.every((el)=>el<10)); // true так как все меньше 10
+    // arr.push(11);
+    // console.log(arr.every((el)=>el<10)); // false так как 1 елемент больше 10
+    console.log(arr.some((el)=>el%2===0)); //true Если хотябы 1 елемент удовлетворит условию то будет true
+
+}
 
 /** Циклы */
 
@@ -96,8 +108,15 @@ function iterate() {
     for (let word of arr) {
         console.log(word);
     }
-    arr.forEach((el, idx, arr) => console.log(`el: ${el} idx: ${idx} arr: ${arr}`));
+    arr.forEach((el, idx, arr) => {
+        // е существует способа остановить или прервать цикл forEach() кроме как выбрасыванием исключения.
+        // Если это требуется, метод forEach() неправильный выбор
+            console.log(`el: ${el} idx: ${idx} arr: ${arr}`)
+        }
+    );
 }
+getBool();
+
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
 
 // mostUsedMethods();
