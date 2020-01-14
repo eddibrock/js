@@ -3,7 +3,10 @@
 //возвести 2 в степень равную степени индекса
 
 
-let int=1;
+let int=74;
+let test=133;
+let zero=test.toString(2).split('');
+console.log(zero);
 let arr = int.toString(2).split('');
 console.log(arr);
 
@@ -13,4 +16,5 @@ arr.map((el,idx,array)=>{
        array[idx-1]=el;
    }
 });
-console.log(parseInt(arr.join(''),2));
+// console.log(arr);
+// console.log(parseInt(arr.join(''),2));

@@ -71,6 +71,7 @@ let arrUnchangeObj = {
  *  TODO some and every работают так же, может их сюда надо?
  * */
 function mostUsedMethods() {
+    //Вместо item, index и array использовать v i a? довольно удобно и локонично и просто запомнить
     const arr = [1, 2, 3, 4, 5, 2];
     const isSomeInArr = arr.some(el => el === 3); // хотябы 1 равен 3
     const isAnyInArr = arr.every(el => el < 6); // все меньше 6
@@ -115,10 +116,9 @@ function iterate() {
         }
     );
 }
-getBool();
 
+// getBool();
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this
-
 // mostUsedMethods();
 // pushPopShiftUnshift();
 // splitJoin();
