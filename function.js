@@ -19,7 +19,7 @@
 //1) Если забыть return то фунция вернет undefined
 //2) чтобы немедленно выйти из функции return; без значения
 // https://learn.javascript.ru/function-basics
-
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions
 
 /** Стрелочные функции */
 
@@ -47,3 +47,46 @@ function ArrowFunctions() {
     const multiply = (a, b) => a * b;
     console.log(multiply(2, 30)); // Prints: 60
 }
+
+function thisInFunction() {
+    // 'use strict';
+    console.log(this);
+    // const hi=()=>{console.log(this);}; // Выведет пустой обьект
+}
+
+//apply and call
+
+
+/** Замыкания */
+function outside(x) {
+    function inside(y) {
+        return x + y;
+    }
+    return inside;
+}
+// fn_inside = outside(3); //
+// result = fn_inside(5); // возвращает 8
+// result1 = outside(3)(5); // возвращает 8
+
+function A(x) {
+    function B(y) {
+        function C(z) {
+            console.log(x + y + z);
+        }
+        C(3);
+    }
+    B(2);
+}
+A(1); // в консоле выведится 6 (1 + 2 + 3)
+
+// конфликт имен. x внутри inside имеет приоритет перед x в outside. Но мне больше нравится обьяснение что
+// функция уже имеет переменную и ей незачем идти дальше
+function outside() {
+    var x = 5;
+    function inside(x) {
+        return x * 2;
+    }
+    return inside;
+}
+
+// outside()(10); // возвращает 20 вместо 10
