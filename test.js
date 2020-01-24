@@ -1,28 +1,11 @@
 //найти крайний правый 0 в двоичном представлении числа 37 и получить его индекс
 
-//возвести 2 в степень равную степени индекса
-function myF(n,res) {
-     res+=n;
-    if(n!==1){
-        n--;
-        return myF(n,res);
-    }
-    else {
-        return res.split('').reverse().join(' ');
-    }
-}
+let animals = [
+    { species: 'Лев', name: 'Король' },
+    { species: 'Кит', name: 'Леня' },
+    { species: 'Пес', name: 'Иван' },
+];
 
-function my_function(n) {
-    let x = '';
-    let i = n;
-    if (n <= 0) {
-    } else {
-        x += my_function(n - 1) + " " + i++;
-    }
-    return x;
-    // Тут нужно написать решение
-}
-
-
-
-console.log(myF(3,''));
+animals.map((el,i,a)=>{
+   console.log(`${el.species} : ${el.name} - ${i}`);
+});
