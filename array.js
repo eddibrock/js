@@ -1,6 +1,7 @@
 /** Bool */
 //Array.isArray();
 /** Изменяющие исходный массив */
+//
 let arrChangeObj = {
     splice: function (arr) {
         /** Просто вырезание */

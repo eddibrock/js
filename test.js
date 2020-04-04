@@ -1,11 +1,8 @@
 //найти крайний правый 0 в двоичном представлении числа 37 и получить его индекс
 
-let animals = [
-    { species: 'Лев', name: 'Король' },
-    { species: 'Кит', name: 'Леня' },
-    { species: 'Пес', name: 'Иван' },
-];
+let arr=[1,2,3,4,5,6,7,8,9];
 
-animals.map((el,i,a)=>{
-   console.log(`${el.species} : ${el.name} - ${i}`);
-});
+let sum=arr.reduce((acc,el)=>acc+el,0);
+let multyply=arr.reduce((acc,el)=>acc*el,1);
+
+console.log((sum)/5);
