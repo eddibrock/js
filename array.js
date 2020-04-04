@@ -68,7 +68,7 @@ let arrUnchangeObj = {
 
 
 /** find findIndex map reduce (reduceEnd) filter
- *  Имеют 2 необязательный аргумент thisArg (для передачи контекста)
+ *  Имеют 1 необязательный аргумент thisArg (для передачи контекста)
  *  TODO some and every работают так же, может их сюда надо?
  * */
 function mostUsedMethods() {
